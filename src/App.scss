@@ -1,0 +1,130 @@
+//reset
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+img {
+    vertical-align: top;
+    border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: none;
+}
+body {
+    line-height: 1.6;
+    font-family: 'GothicA1-Light', sans-serif;
+    font-size: 14px;
+    border-collapse: collapse;
+}
+//reset
+
+//mixin start
+@mixin flexlayout($flex: flex, $dir: row, $wrap: nowrap, $just: space-between, $align: center) {
+    display: $flex;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+    justify-content: $just;
+    align-items: $align;
+}
+
+@mixin border($weight: 1px, $line: solid, $color: #ccc) {
+    border: $weight $line $color;
+}
+
+@mixin boxReset($border: none, $outline: none, $background: none) {
+    border: $border;
+    outline: $outline;
+    background: $background;
+}
+//mixin end
+
+//color
+$mainColor: #101B3F; //kara 검은 바다 색
+$mainWhite: #fff;
+$mainBlack: #222;
+$mainGray: #ccc;
+//color
+
+//font
+
+//눈누 Gothic A1 폰트
+@font-face {
+    font-family: 'GothicA1-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/GothicA1-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+}
+//눈누 프리텐다드
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+//font
+
+//global style
+.inner {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+//global style
+
+//about me
+.aboutMe{
+    @include flexlayout();
+}
+.meLeft {
+    width: 29%;
+    h1{
+        font-size: 20px;
+    }
+}
+.simpleInfo{
+    @include border();
+    @include flexlayout($dir: column, $just: flex-start);
+    padding: 20px 0;
+    border-radius: 10px;
+    height: 700px;
+    .infoImg {
+        width: 250px;
+        height: 400px;
+        background: steelblue;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .introducing {
+        padding: 20px 0;
+    }
+    p{
+        font-size: 18px;
+        .infoIcon{
+            margin-right: 10px;
+            vertical-align: text-top;
+        }
+    }
+}
+.meRight{
+    width: 69%;
+}
+//about me

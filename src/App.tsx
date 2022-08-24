@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import MainIndex from './components/MainIndex';
 
 function App() {
