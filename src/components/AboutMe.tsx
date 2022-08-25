@@ -2,6 +2,12 @@ import React from 'react';
 import { AiFillGithub } from 'react-icons/ai';
 import { IoEnterOutline } from 'react-icons/io5';
 import { SiGmail } from 'react-icons/si';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from "swiper";
+import 'swiper/css';
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Link } from 'react-router-dom';
 const AboutMe = () => {
     return (
         <div className='aboutMe inner'>
@@ -25,7 +31,7 @@ const AboutMe = () => {
             </div>
             <div className='meRight'>
                 <div className='stacks'>
-                    <h1>Stacks</h1>
+                    <h1 className='categoryTitle'>Stacks</h1>
                     <ul>
                         <li>
                             <h3>Front-End</h3>
@@ -50,61 +56,93 @@ const AboutMe = () => {
                         </li>
                     </ul>
                 </div>
-                <ul className='quickConnect'>
-                    <h1>Projects</h1>
-                    <li>
-                        <a href='https://comet-client.vercel.app/'><img src='' alt='tempus site' /></a>
-                        <div className='usedSkill'>
-                            <div className='skills'>React</div>
-                            <div className='skills'>Javascript</div>
-                            <div className='skills'>Redux</div>
-                            <div className='skills'>Node.js</div>
-                            <div className='skills'>MySQL</div>
-                            <div className='skills'>S3</div>
-                        </div>
-                        <div className='simpleExplain'>
-                            원하는 프로젝트를 찜하거나 후원할 수 있고 내가 직접 프로젝트를 올릴 수 있는 가상의 펀딩 사이트
-                        </div>
-                        <div>
-                            <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='tempus client git 주소' /></a>
-                            <a href='https://github.com/hyunjinP31/comet-server'><AiFillGithub title='tempus server git 주소' /></a>
-                            <a href='https://comet-client.vercel.app/'><IoEnterOutline title='tempus 사이트 주소' /></a>
-                        </div>
-                    </li>
-                    <li>
-                        <a href='https://strato-client.vercel.app/'><img src='' alt='strato site' /></a>
-                        <div className='usedSkill'>
-                            <div className='skills'>React</div>
-                            <div className='skills'>Javascript</div>
-                            <div className='skills'>Redux</div>
-                            <div className='skills'>Node.js</div>
-                            <div className='skills'>MySQL</div>
-                        </div>
-                        <div className='simpleExplain'>
-                            가상의 호텔 스트라토를 소개하는 사이트
-                        </div>
-                        <div>
-                            <a href='https://github.com/hyunjinP31/strato-client'><AiFillGithub title='strato client git 주소' /></a>
-                            <a href='https://github.com/hyunjinP31/strato-server'><AiFillGithub title='strato server git 주소' /></a>
-                            <a href='https://strato-client.vercel.app/'><IoEnterOutline title='strato 사이트 주소' /></a>
-                        </div>
-                    </li>
-                    <li>
-                        <img src='' alt='greenBooks site' />
-                        <div className='usedSkill'>
-                            <div className='skills'>PHP</div>
-                            <div className='skills'>Javascript</div>
-                            <div className='skills'>MySQL</div>
-                        </div>
-                        <div className='simpleExplain'>
-                            원하는 도서를 장바구니에 넣고 구매할 수 있는 가상의 도서 판매 사이트
-                        </div>
-                        <div>
-                            <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='greenBooks git 주소' /></a>
-                            <a href='https://comet-client.vercel.app/'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
-                        </div>
-                    </li>
-                </ul>
+                <div className='projects'>
+                    <h1 className='categoryTitle'>Projects</h1>
+                    <Swiper className='quickConnect mySwiper'
+                        spaceBetween={30}
+                        slidesPerView={2}
+                        slidesPerGroup={2}
+                        navigation={true}
+                        modules={[Navigation]}
+                        centeredSlides={false}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        breakpoints={{
+                            768: {
+                                slidesPerView: 3,
+                                slidesPerGroup: 3,
+                            }
+                        }}>
+                        <SwiperSlide className='projectItem'>
+                            <div className='projectImg'>
+                                <img src='' alt='tempus site' />
+                                <div className='learnMore'>
+                                    <Link to='/projectsdesc/tempusproject'><div className='learnMoreBtn'>Learn More</div></Link>
+                                </div>
+                            </div>
+                            <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
+                                <SwiperSlide className='skills'>React</SwiperSlide>
+                                <SwiperSlide className='skills'>Javascript</SwiperSlide>
+                                <SwiperSlide className='skills'>Redux</SwiperSlide>
+                                <SwiperSlide className='skills'>Node.js</SwiperSlide>
+                                <SwiperSlide className='skills'>MySQL</SwiperSlide>
+                                <SwiperSlide className='skills'>S3</SwiperSlide>
+                            </Swiper>
+                            <div className='simpleExplain'>
+                                원하는 프로젝트를 찜하거나 후원할 수 있고 내가 직접 프로젝트를 올릴 수 있는 펀딩 사이트
+                            </div>
+                            <div className='directUrls'>
+                                <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='tempus client Git 주소' /></a>
+                                <a href='https://github.com/hyunjinP31/comet-server'><AiFillGithub title='tempus server Git 주소' /></a>
+                                <a href='https://comet-client.vercel.app/'><IoEnterOutline title='tempus 사이트 주소' /></a>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='projectItem'>
+                            <div className='projectImg'>
+                                <img src='' alt='strato site' />
+                                <div className='learnMore'>
+                                    <div className='learnMoreBtn'>Learn More</div>
+                                </div>
+                            </div>
+                            <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
+                                <SwiperSlide className='skills'>React</SwiperSlide>
+                                <SwiperSlide className='skills'>Javascript</SwiperSlide>
+                                <SwiperSlide className='skills'>Redux</SwiperSlide>
+                                <SwiperSlide className='skills'>Node.js</SwiperSlide>
+                                <SwiperSlide className='skills'>MySQL</SwiperSlide>
+                            </Swiper>
+                            <div className='simpleExplain'>
+                                호텔 스트라토를 소개하는 사이트
+                            </div>
+                            <div className='directUrls'>
+                                <a href='https://github.com/hyunjinP31/strato-client'><AiFillGithub title='strato client Git 주소' /></a>
+                                <a href='https://github.com/hyunjinP31/strato-server'><AiFillGithub title='strato server Git 주소' /></a>
+                                <a href='https://strato-client.vercel.app/'><IoEnterOutline title='strato 사이트 주소' /></a>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='projectItem'>
+                            <div className='projectImg'>
+                                <img src='' alt='greenBooks site' />
+                                <div className='learnMore'>
+                                    <div className='learnMoreBtn'>Learn More</div>
+                                </div>
+                            </div>
+                            <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
+                                <SwiperSlide className='skills'>PHP</SwiperSlide>
+                                <SwiperSlide className='skills'>Javascript</SwiperSlide>
+                                <SwiperSlide className='skills'>MySQL</SwiperSlide>
+                            </Swiper>
+                            <div className='simpleExplain'>
+                                원하는 도서를 장바구니에 넣고 구매할 수 있는 도서 판매 사이트
+                            </div>
+                            <div className='directUrls'>
+                                <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='greenBooks Git 주소' /></a>
+                                <a href='https://comet-client.vercel.app/'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
+                            </div>
+                        </SwiperSlide>
+                    </Swiper>
+                </div>
             </div>
         </div>
     );

@@ -57,6 +57,7 @@ body {
 
 //color
 $mainColor: #101B3F; //kara 검은 바다 색
+$mainColor2: #E86B79;
 $mainWhite: #fff;
 $mainBlack: #222;
 $mainGray: #ccc;
@@ -88,9 +89,15 @@ $mainGray: #ccc;
 }
 //global style
 
+//mainindex
+.Wrap{
+    margin-top: 70px;
+}
+//mainindex
+
 //about me
 .aboutMe{
-    @include flexlayout();
+    @include flexlayout($align: flex-start);
 }
 .meLeft {
     width: 29%;
@@ -124,7 +131,130 @@ $mainGray: #ccc;
         }
     }
 }
+.categoryTitle{
+    font-size: 24px;
+    font-weight: bolder;
+    margin: 10px 0;
+}
 .meRight{
     width: 69%;
 }
+.stacks {
+    margin-bottom: 30px;
+    ul {
+        @include flexlayout($align: flex-start);
+        h3{
+            font-size: 16px;
+            font-weight: bold;
+        }
+    }
+}
+.quickConnect{
+    height: 350px;
+    justify-content: space-between;
+    .projectItem{
+        position: relative;
+    }
+    .projectImg {
+        display: block;
+        width: 100%;
+        height: 60%;
+        position: relative;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .usedSkill{
+        height: 25px;
+        line-height: 25px;
+    }
+    .skills {
+        font-size: 12px;
+        text-align: center;
+    }
+    .simpleExplain {
+        padding: 10px;
+        height: 40%;
+    }
+    .directUrls{
+        position: absolute;
+        bottom: -16px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 36px;
+        z-index: 5;
+        svg {
+            &:hover {
+                color: $mainColor2;
+            }
+        }
+    }
+    .learnMore{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        .learnMoreBtn{
+            width: 100px;
+            height: 30px;
+            transition: 0.3s;
+            background: $mainColor;
+            border-radius: 20px;
+            color: $mainWhite;
+            position: absolute;
+            top: -100px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            line-height: 30px;
+            &:hover {
+                background: lighten($color: $mainColor, $amount: 70%);
+            }
+        }
+        &:hover .learnMoreBtn{
+            top: 50%;
+        }
+    }
+}
+.swiper-wrapper {
+    .swiper-pagination.swiper-pagination-progressbar{
+        top: auto;
+        bottom: 0;
+        height: 2px;
+        .swiper-pagination-progressbar-fill {
+            background: $mainColor;
+        }
+    }
+}
 //about me
+
+//projectDetail
+.pDetailWrap {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.pDetailExplain{
+    width: 90vw;
+    height: 95vh;
+    background: $mainWhite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include flexlayout();
+}
+.pDetailImg {
+    width: 40%;
+    height: 100%;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+}
+.pDetailLeft {
+
+}
+//projectDetail
