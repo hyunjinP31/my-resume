@@ -8,7 +8,16 @@ import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Link } from 'react-router-dom';
-const AboutMe = () => {
+import { UtilState } from './module/util';
+
+type AboutMeProps = {
+    util: UtilState;
+    tempusToggle: () => void;
+    stratoToggle: () => void;
+    greenBooksToggle: () => void;
+}
+
+const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMeProps) => {
     return (
         <div className='aboutMe inner'>
             <div className='meLeft'>
@@ -78,7 +87,7 @@ const AboutMe = () => {
                             <div className='projectImg'>
                                 <img src='' alt='tempus site' />
                                 <div className='learnMore'>
-                                    <Link to='/projectsdesc/tempusproject'><div className='learnMoreBtn'>Learn More</div></Link>
+                                    <div onClick={tempusToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -102,7 +111,7 @@ const AboutMe = () => {
                             <div className='projectImg'>
                                 <img src='' alt='strato site' />
                                 <div className='learnMore'>
-                                    <div className='learnMoreBtn'>Learn More</div>
+                                    <div onClick={stratoToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -125,7 +134,7 @@ const AboutMe = () => {
                             <div className='projectImg'>
                                 <img src='' alt='greenBooks site' />
                                 <div className='learnMore'>
-                                    <div className='learnMoreBtn'>Learn More</div>
+                                    <div onClick={greenBooksToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>

@@ -41,48 +41,55 @@ const ProjectTempus = () => {
                         <img src='' alt='tempus 내정보 화면' />
                     </SwiperSlide>
                 </Swiper>
-                <div className='pDetailLeft'>
-                    <h1>TEMPUS</h1>
-                    <p>개발일자 : 2022.08</p>
+                <div className='pDetailRight'>
+                    <div className='pDetailTitleWrap'>
+                        <h1 className='projectTitle'>TEMPUS</h1>
+                        <p>개발일자 : 2022.08</p>
+                    </div>
                     <div className='tempusMoreExplain'>
-                        <div className='projectsUrls'>
-                            <p>
-                                Git Source Code: <a href='https://github.com/hyunjinP31/comet-client'>https://github.com/hyunjinP31/comet-client<span>(클라이언트)</span></a>
-                                <a href='https://github.com/hyunjinP31/comet-server'><span>https://github.com/hyunjinP31/comet-server</span><span>(서버)</span></a>
-                            </p>
-                            <p>
-                                Site: <a href='https://comet-client.vercel.app/'>https://comet-client.vercel.app/<span>(서버)</span></a>
-                            </p>
-                        </div>
-                        <div className='description'>
-                            <h2>Short Description</h2>
-                            <span>
+                        <ul className='projectsUrls pDetailSection'>
+                            <li><h2 className='pDetailSectionTitle'><span>🔗</span>Url</h2></li>
+                            <li>
+                                <p><strong>Git Source Code</strong>(client): <a href='https://github.com/hyunjinP31/comet-client'>https://github.com/hyunjinP31/comet-client</a></p>
+                                <p><strong>Git Source Code</strong>(server): <a href='https://github.com/hyunjinP31/comet-server'><span>https://github.com/hyunjinP31/comet-server</span></a></p>
+                            </li>
+                            <li>
+                                <strong>Site</strong>: <a href='https://comet-client.vercel.app/'>https://comet-client.vercel.app/</a>
+                            </li>
+                        </ul>
+                        <div className='description pDetailSection'>
+                            <h2 className='pDetailSectionTitle'><span>📋</span>Short Description</h2>
+                            <p className='motivation'>
                                 나의 프로젝트를 등록하거나 타사용자의 프로젝트를 찜하거나 후원할 수 있는 펀딩 사이트 입니다.
                                 소규모 프로젝트나 개인이 상품을 런칭할 때 많이 사용되는 펀딩 사이트들의 프로세스에 흥미를 느껴 제작하게 되었습니다.
-                            </span>
-                            ReactJs를 사용해 개발하였으며 서버는 node.js로 만들었습니다.
-                            Redux, Redux-thunk 를 이용해 상태와 비동기 처리를 관리하며 비동기 처리에 대해 더 깊이 이해하고
-                            상태관리 라이브러리를 더 완벽히 숙지할 수 있었습니다.
-                            heroku로 배포하며 서버에서의 이미지 저장에는 다른 storage 사용이 필요하다는 것을 알게 되었고
-                            AWS의 S3 서비스를 사용하여 이미지 저장을 따로 관리해 주었습니다.
+                            </p>
+                            <br/>
+                            <p className='develop'>
+                                <strong className='emphasis'>ReactJs</strong>를 사용해 개발하였으며 서버는 <strong className='emphasis'>node.js</strong>로 만들었하였습니다.
+                                <strong className='emphasis'>Redux, Redux-thunk</strong> 를 이용해 상태와 비동기 처리를 관리하며 비동기 처리에 대해 더 깊이 이해하고
+                                상태관리 라이브러리를 더 확실히 <strong className='emphasis'>이해하고 적응</strong>하게 된 프로젝트였습니다.
+                                <strong className='emphasis'>heroku</strong>로 배포하며 서버에서의 이미지 저장에는 다른 storage 사용이 필요하다는 것을 알게 되었고
+                                <strong className='emphasis'> AWS의 S3 서비스</strong>를 사용하여 이미지 저장을 따로 관리해 주었습니다.
+                            </p>
                         </div>
-                        <ul className='mainFunction'>
-                            <li><h2>Main Function</h2></li>
-                            <li>회원가입 <span>(유효성 검사, submit 시 유효하지 않은 input이 있으면 focusing 처리)</span></li>
-                            <li>프로젝트 등록 <span>(이미지 파일 업로드 시 input자리에 이미지 로드. 프로젝트 이름 중복 검사)</span></li>
-                            <li>찜하기 <span>(찜한 상품이 바로 표시되도록 화면 렌더링에 많은 노력을 기울임. 찜한 상품을 데이터베이스에 넣어주는 처리를 하면서 눈속임용 하트가 바로 표시되도록 함.)</span></li>
-                            <li>후원하기 <span>(후원을 했을 때 달성 percentage에 반영이 되도록 하고 후원현황이나 판매자인지에 따라 버튼의 표시를 다르게 함)</span></li>
+                        <ul className='mainFunction pDetailSection'>
+                            <li><h2 className='pDetailSectionTitle'><span>💡</span>Main Function</h2></li>
+                            <li><strong>회원가입</strong> <span>(<strong className='emphasis'>유효성 검사</strong>, submit 시 유효하지 않은 input이 있으면 <strong className='emphasis'>focusing</strong> 처리)</span></li>
+                            <li><strong>프로젝트 등록</strong> <span>(이미지 파일 업로드 시 input자리에 <strong className='emphasis'>이미지 로드</strong>. 프로젝트 이름 <strong className='emphasis'>중복 검사</strong>)</span></li>
+                            <li><strong>찜하기</strong> <span>(사용자의 동작에 따라 바로바로 표시되도록 <strong className='emphasis'>화면 렌더링</strong>에 신경씀. )</span></li>
+                            <li><strong>후원하기</strong> <span>(후원을 했을 때 달성 <strong className='emphasis'>percentage에 반영</strong>이 되도록 하고 후원현황이나 판매자인지에 따라 버튼의 표시를 다르게 함)</span></li>
                         </ul>
-                        <ul className='stacks'>
-                            <li><h2>Stacks</h2></li>
+                        <ul className='pDetailstacks pDetailSection'>
+                            <li><h2 className='pDetailSectionTitle'><span>🔨</span>Stacks</h2></li>
                             <li><strong>Frontend</strong>: ReactJs, Redux, Redux-thunk, Sass</li>
                             <li><strong>Backend</strong>: node.js</li>
                             <li><strong>Database</strong>: mySQL</li>
                             <li><strong>Deployment</strong>: varcel, heroku, AWS(RDS, ED2, S3)</li>
                             <li></li>
                         </ul>
-                        <ul className='member'>
-                            <li>1인 개발 프로젝트</li>
+                        <ul className='member pDetailSection'>
+                            <li><h2 className='pDetailSectionTitle'><span>😎</span>Member</h2></li>
+                            <li><strong>1인</strong> 개발 프로젝트</li>
                         </ul>
                     </div>
                 </div>

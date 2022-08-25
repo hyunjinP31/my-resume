@@ -61,6 +61,7 @@ $mainColor2: #E86B79;
 $mainWhite: #fff;
 $mainBlack: #222;
 $mainGray: #ccc;
+$mainDarkGray: #888;
 //color
 
 //font
@@ -154,6 +155,9 @@ $mainGray: #ccc;
     justify-content: space-between;
     .projectItem{
         position: relative;
+        &:hover .learnMoreBtn{
+            top: 50%;
+        }
     }
     .projectImg {
         display: block;
@@ -213,9 +217,6 @@ $mainGray: #ccc;
                 background: lighten($color: $mainColor, $amount: 70%);
             }
         }
-        &:hover .learnMoreBtn{
-            top: 50%;
-        }
     }
 }
 .swiper-wrapper {
@@ -233,10 +234,14 @@ $mainGray: #ccc;
 //projectDetail
 .pDetailWrap {
     width: 100%;
-    height: 100%;
-    position: relative;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 .pDetailExplain{
+    overflow-y: scroll;
     width: 90vw;
     height: 95vh;
     background: $mainWhite;
@@ -244,17 +249,58 @@ $mainGray: #ccc;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    @include flexlayout();
+    @include flexlayout($align: flex-start);
 }
-.pDetailImg {
-    width: 40%;
+.swiper.pDetailImg {
     height: 100%;
+    width: 40%;
     img {
         width: 100%;
         height: 100%;
     }
 }
-.pDetailLeft {
-
+.pDetailRight {
+    width: 60%;
+    font-size: 16px;
+    padding-right: 70px;
+    .pDetailTitleWrap {
+        text-align: center;
+        padding: 40px 0;
+        .projectTitle {
+            color: $mainColor;
+            font-size: 40px;
+            font-weight: bolder;
+        }
+        p{
+            color: $mainDarkGray;
+        }
+    }
+    .pDetailSectionTitle{
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 10px;
+        span {
+            font-size: 26px;
+            margin-right: 10px;
+        }
+    }
+}
+.pDetailSection {
+    margin-bottom: 30px;
+}
+.projectsUrls {
+    a {
+        color: $mainColor2;
+        text-decoration: underline;
+    }
+}
+.mainFunction{
+    span{
+        font-size: 14px;
+        color: $mainDarkGray;
+    }
+}
+.emphasis {
+    color: $mainColor2;
 }
 //projectDetail
