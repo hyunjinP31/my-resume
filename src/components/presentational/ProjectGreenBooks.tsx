@@ -34,16 +34,16 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                         clickable: true,
                     }}>
                     <SwiperSlide>
-                        <img src='' alt='tempus 메인 화면' />
+                        <img src='' alt='GreenBooks 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 상품 디테일 화면' />
+                        <img src='' alt='GreenBooks 상품 디테일 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 회원가입 화면' />
+                        <img src='' alt='GreenBooks 회원가입 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 내정보 화면' />
+                        <img src='' alt='GreenBooks 내정보 화면' />
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
