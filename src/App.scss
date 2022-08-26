@@ -1,3 +1,12 @@
+//color
+$mainColor: #101B3F; //kara 검은 바다 색
+$mainColor2: #E86B79;
+$mainWhite: #fff;
+$mainBlack: #222;
+$mainGray: #ccc;
+$mainDarkGray: #888;
+//color
+
 //reset
 * {
     margin: 0; padding: 0; box-sizing: border-box;
@@ -7,7 +16,10 @@ li {
 }
 a {
     text-decoration: none;
-    color: inherit;
+    color: $mainColor2;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 img {
     vertical-align: top;
@@ -55,14 +67,7 @@ body {
 }
 //mixin end
 
-//color
-$mainColor: #101B3F; //kara 검은 바다 색
-$mainColor2: #E86B79;
-$mainWhite: #fff;
-$mainBlack: #222;
-$mainGray: #ccc;
-$mainDarkGray: #888;
-//color
+
 
 //font
 
@@ -133,7 +138,8 @@ $mainDarkGray: #888;
     }
 }
 .categoryTitle{
-    font-size: 24px;
+    font-size: 26px;
+    color: $mainColor2;
     font-weight: bolder;
     margin: 10px 0;
 }
@@ -189,6 +195,7 @@ $mainDarkGray: #888;
         font-size: 36px;
         z-index: 5;
         svg {
+            color: $mainColor;
             &:hover {
                 color: $mainColor2;
             }
@@ -213,8 +220,9 @@ $mainDarkGray: #888;
             transform: translate(-50%, -50%);
             text-align: center;
             line-height: 30px;
+            cursor: pointer;
             &:hover {
-                background: lighten($color: $mainColor, $amount: 70%);
+                background: $mainColor2;
             }
         }
     }
@@ -280,19 +288,13 @@ $mainDarkGray: #888;
         font-weight: bold;
         padding-bottom: 10px;
         span {
-            font-size: 26px;
+            font-size: 24px;
             margin-right: 10px;
         }
     }
 }
 .pDetailSection {
     margin-bottom: 30px;
-}
-.projectsUrls {
-    a {
-        color: $mainColor2;
-        text-decoration: underline;
-    }
 }
 .mainFunction{
     span{
@@ -302,5 +304,13 @@ $mainDarkGray: #888;
 }
 .emphasis {
     color: $mainColor2;
+}
+.pDetailClose {
+    position: sticky;
+    top: 10px;
+    left: 1090px;
+    font-size: 34px;
+    color: $mainColor2;
+    cursor: pointer;
 }
 //projectDetail

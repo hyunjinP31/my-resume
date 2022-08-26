@@ -7,7 +7,6 @@ import { Pagination, Navigation } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Link } from 'react-router-dom';
 import { UtilState } from './module/util';
 
 type AboutMeProps = {
@@ -146,7 +145,7 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                                 원하는 도서를 장바구니에 넣고 구매할 수 있는 도서 판매 사이트
                             </div>
                             <div className='directUrls'>
-                                <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='greenBooks Git 주소' /></a>
+                                <a href='https://github.com/hyunjinP31/mall-php-project'><AiFillGithub title='greenBooks Git 주소' /></a>
                                 <a href='https://comet-client.vercel.app/'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
                             </div>
                         </SwiperSlide>

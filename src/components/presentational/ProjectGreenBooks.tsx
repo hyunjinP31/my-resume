@@ -15,16 +15,16 @@ export const BlackBg = styled.div`
     height: 100%;
     background: rgba(0,0,0,0.4);
 `
-type ProjectTempusProps = {
-    tempusToggle: () => void;
+type ProjectGreenBooksProps = {
+    greenBooksToggle: () => void;
 }
 
-const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
+const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
     return (
         <div className='pDetailWrap'>
-            <BlackBg onClick={tempusToggle} />
+            <BlackBg onClick={greenBooksToggle}/>
             <div className='pDetailExplain'>
-                <FaRegWindowClose className='pDetailClose' onClick={tempusToggle} />
+                <FaRegWindowClose className='pDetailClose' onClick={greenBooksToggle} />
                 <Swiper
                     className='pDetailImg mySwiper'
                     slidesPerView={1}
@@ -48,15 +48,14 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
                 </Swiper>
                 <div className='pDetailRight'>
                     <div className='pDetailTitleWrap'>
-                        <h1 className='projectTitle'>TEMPUS</h1>
-                        <p>개발일자 : 2022.08</p>
+                        <h1 className='projectTitle'>GreenBooks</h1>
+                        <p>개발일자 : 2022.06</p>
                     </div>
                     <div className='tempusMoreExplain'>
                         <ul className='projectsUrls pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>🔗</span>Url</h2></li>
                             <li>
-                                <p><strong>Git Source Code</strong>(client): <a href='https://github.com/hyunjinP31/comet-client'>https://github.com/hyunjinP31/comet-client</a></p>
-                                <p><strong>Git Source Code</strong>(server): <a href='https://github.com/hyunjinP31/comet-server'><span>https://github.com/hyunjinP31/comet-server</span></a></p>
+                                <p><strong>Git Source Code</strong>: <a href='https://github.com/hyunjinP31/mall-php-project'>https://github.com/hyunjinP31/mall-php-project</a></p>
                             </li>
                             <li>
                                 <strong>Site</strong>: <a href='https://comet-client.vercel.app/'>https://comet-client.vercel.app/</a>
@@ -103,4 +102,4 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
     );
 };
 
-export default ProjectTempus;
+export default ProjectGreenBooks;
