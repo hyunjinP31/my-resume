@@ -24,7 +24,6 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
         <div className='pDetailWrap'>
             <BlackBg onClick={tempusToggle} />
             <div className='pDetailExplain'>
-                <FaRegWindowClose className='pDetailClose' onClick={tempusToggle} />
                 <Swiper
                     className='pDetailImg mySwiper'
                     slidesPerView={1}
@@ -47,6 +46,7 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
+                    <div className='pDetailClose'><FaRegWindowClose onClick={tempusToggle} /></div>
                     <div className='pDetailTitleWrap'>
                         <h1 className='projectTitle'>TEMPUS</h1>
                         <p>개발일자 : 2022.08</p>

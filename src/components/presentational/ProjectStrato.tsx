@@ -24,7 +24,6 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
         <div className='pDetailWrap'>
             <BlackBg onClick={stratoToggle}/>
             <div className='pDetailExplain'>
-                <FaRegWindowClose className='pDetailClose' onClick={stratoToggle} />
                 <Swiper
                     className='pDetailImg mySwiper'
                     slidesPerView={1}
@@ -47,6 +46,7 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
+                    <div className='pDetailClose'><FaRegWindowClose onClick={stratoToggle} /></div>
                     <div className='pDetailTitleWrap'>
                         <h1 className='projectTitle'>STRATO</h1>
                         <p>개발일자 : 2022.07</p>

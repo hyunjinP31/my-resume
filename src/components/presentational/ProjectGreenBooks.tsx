@@ -24,7 +24,6 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
         <div className='pDetailWrap'>
             <BlackBg onClick={greenBooksToggle}/>
             <div className='pDetailExplain'>
-                <FaRegWindowClose className='pDetailClose' onClick={greenBooksToggle} />
                 <Swiper
                     className='pDetailImg mySwiper'
                     slidesPerView={1}
@@ -47,6 +46,7 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
+                    <div className='pDetailClose'><FaRegWindowClose onClick={greenBooksToggle} /></div>
                     <div className='pDetailTitleWrap'>
                         <h1 className='projectTitle'>GreenBooks</h1>
                         <p>개발일자 : 2022.06</p>
@@ -64,21 +64,18 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                         <div className='description pDetailSection'>
                             <h2 className='pDetailSectionTitle'><span>📋</span>Short Description</h2>
                             <p className='motivation'>
-                                나의 프로젝트를 등록하거나 타사용자의 프로젝트를 찜하거나 후원할 수 있는 펀딩 사이트 입니다.
-                                소규모 프로젝트나 개인이 상품을 런칭할 때 많이 사용되는 펀딩 사이트들의 프로세스에 흥미를 느껴 제작하게 되었습니다.
+                                처음으로 사이트 전체를 제작했던 프로젝트 였습니다. 도서가 취미인지라 평소 다른 쇼핑 사이트 보다도 도서 판매 사이트를 많이 보아서
+                                주제를 선정할 때 의견을 내었고 체택되어 제작한 사이트입니다.
                             </p>
-                            <br/>
+                            <br/><strong className='emphasis'>ReactJs</strong>
                             <p className='develop'>
-                                <strong className='emphasis'>ReactJs</strong>를 사용해 개발하였으며 서버는 <strong className='emphasis'>node.js</strong>로 만들었하였습니다.
-                                <strong className='emphasis'>Redux, Redux-thunk</strong> 를 이용해 상태와 비동기 처리를 관리하며 비동기 처리에 대해 더 깊이 이해하고
-                                상태관리 라이브러리를 더 확실히 <strong className='emphasis'>이해하고 적응</strong>하게 된 프로젝트였습니다.
-                                <strong className='emphasis'>heroku</strong>로 배포하며 서버에서의 이미지 저장에는 다른 storage 사용이 필요하다는 것을 알게 되었고
-                                <strong className='emphasis'> AWS의 S3 서비스</strong>를 사용하여 이미지 저장을 따로 관리해 주었습니다.
+                                php, jsvascript로 개발한 사이트 입니다. 개발 당시에는 데이터 베이스를 로컬로 사용하였지만 AWS 클라우드의 사용을 익히고 바꾸어 주었습니다.
+                                처음으로 사이트를 제작하면서 database 연동에 익숙해져 갔던 프로젝트 였습니다. 페이지에 따라 다른 쿼리문을 작성하여 데이터를 불러오고 Table Inner Join을 사용해
+                                장바구니에 넣은 상품을 조회하는 메커니즘을 가지고 있습니다. 또 처음 로그인 처리를 해주면서 세션 객체에 대한 이해를 쌓았습니다.
                             </p>
                         </div>
                         <ul className='mainFunction pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>💡</span>Main Function</h2></li>
-                            <li><strong>회원가입</strong> <span>(<strong className='emphasis'>유효성 검사</strong>, submit 시 유효하지 않은 input이 있으면 <strong className='emphasis'>focusing</strong> 처리)</span></li>
                             <li><strong>프로젝트 등록</strong> <span>(이미지 파일 업로드 시 input자리에 <strong className='emphasis'>이미지 로드</strong>. 프로젝트 이름 <strong className='emphasis'>중복 검사</strong>)</span></li>
                             <li><strong>찜하기</strong> <span>(사용자의 동작에 따라 바로바로 표시되도록 <strong className='emphasis'>화면 렌더링</strong>에 신경씀. )</span></li>
                             <li><strong>후원하기</strong> <span>(후원을 했을 때 달성 <strong className='emphasis'>percentage에 반영</strong>이 되도록 하고 후원현황이나 판매자인지에 따라 버튼의 표시를 다르게 함)</span></li>
