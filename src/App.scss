@@ -108,18 +108,22 @@ body {
 .meLeft {
     width: 29%;
     h1{
+        text-align: center;
         font-size: 20px;
+        span{
+            font-size: 18px
+        }
     }
 }
 .simpleInfo{
     @include border();
-    @include flexlayout($dir: column, $just: flex-start);
-    padding: 20px 0;
+    @include flexlayout($dir: column, $just: flex-start, $align: flex-start);
+    padding: 20px;
     border-radius: 10px;
-    height: 700px;
+    height: auto;
     .infoImg {
-        width: 250px;
-        height: 400px;
+        width: 100%;
+        height: auto;
         background: steelblue;
         img{
             width: 100%;
@@ -128,6 +132,9 @@ body {
     }
     .introducing {
         padding: 20px 0;
+        li {
+            margin: 10px 0;
+        }
     }
     p{
         font-size: 18px;
@@ -261,6 +268,7 @@ body {
 .swiper.pDetailImg {
     height: 100%;
     width: 40%;
+    margin: 0;
     img {
         width: 100%;
         height: 100%;
@@ -268,7 +276,7 @@ body {
 }
 .pDetailRight {
     overflow-y: auto;
-    width: 60%;
+    width: 58%;
     max-height: 100%;
     font-size: 16px;
     padding-right: 70px;

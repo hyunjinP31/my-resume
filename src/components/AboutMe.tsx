@@ -1,5 +1,5 @@
 import React from 'react';
-import { AiFillGithub } from 'react-icons/ai';
+import { AiFillGithub, AiFillPhone } from 'react-icons/ai';
 import { IoEnterOutline } from 'react-icons/io5';
 import { SiGmail } from 'react-icons/si';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -20,10 +20,10 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
     return (
         <div className='aboutMe inner'>
             <div className='meLeft'>
-                <h1>매일 하나 더 배워가는 개발자 <span>박현진</span></h1>
+                <h1><span>매일 한층 더 <strong className='emphasis'>성장</strong>하는 개발자</span> <strong className='emphasis'>박현진</strong></h1>
                 <div className='simpleInfo'>
                     <div className='infoImg'>
-                        <img src='' alt='개발자 박현진의 사진' />
+                        <img src='image/meWithTree.jpg' alt='개발자 박현진의 사진' />
                     </div>
                     <ul className='introducing'>
                         <li>
@@ -33,6 +33,10 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                         <li>
                             <p><SiGmail className='infoIcon' />Email</p>
                             <span>wiseblue31@gmail.com</span>
+                        </li>
+                        <li>
+                            <p><AiFillPhone className='infoIcon' />Phone</p>
+                            <span>010. 9962. 9620</span>
                         </li>
                     </ul>
                 </div>

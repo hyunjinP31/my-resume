@@ -94,8 +94,8 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
                         </ul>
                         <ul className='member pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>😎</span>Member</h2></li>
-                            <li><strong>2인</strong> 개발 프로젝트</li>
-                            <li><strong>박현진</strong>(본인), <strong>이국현</strong>(Front-end)</li>
+                            <li><strong>3인</strong> 개발 프로젝트</li>
+                            <li><strong>박현진</strong>(본인), <strong>이국현</strong>(Front-end), <strong>정순보</strong>(Front-end)</li>
                         </ul>
                     </div>
                 </div>

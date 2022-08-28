@@ -33,16 +33,16 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
                         clickable: true,
                     }}>
                     <SwiperSlide>
-                        <img src='' alt='tempus 메인 화면' />
+                        <img src='image/tempus_main.png' alt='tempus 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 상품 디테일 화면' />
+                        <img src='image/tempus_project_detail.png' alt='tempus 상품 디테일 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 회원가입 화면' />
+                        <img src='image/tempus_create_project.png' alt='tempus 상품 등록 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='tempus 내정보 화면' />
+                        <img src='image/tempus_my_menu.png' alt='tempus 내정보 화면' />
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
