@@ -14,9 +14,10 @@ type AboutMeProps = {
     tempusToggle: () => void;
     stratoToggle: () => void;
     greenBooksToggle: () => void;
+    myResumeToggle: () => void;
 }
 
-const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMeProps) => {
+const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeToggle }: AboutMeProps) => {
     return (
         <div className='aboutMe inner'>
             <div className='meLeft'>
@@ -88,6 +89,26 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                         }}>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
+                                <img src='image/compass.png' alt='myResume site' />
+                                <div className='learnMore'>
+                                    <div onClick={myResumeToggle} className='learnMoreBtn'>Learn More</div>
+                                </div>
+                            </div>
+                            <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
+                                <SwiperSlide className='skills'>React</SwiperSlide>
+                                <SwiperSlide className='skills'>TypeScript</SwiperSlide>
+                                <SwiperSlide className='skills'>Redux</SwiperSlide>
+                            </Swiper>
+                            <div className='simpleExplain'>
+                                개발자 박현진을 소개하는 사이트
+                            </div>
+                            <div className='directUrls'>
+                                <a href='https://github.com/hyunjinP31/my-resume'><AiFillGithub title='myResume Git 주소' /></a>
+                                <a href='https://my-resume-ruddy-six.vercel.app/'><IoEnterOutline title='myResume 사이트 주소' /></a>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide className='projectItem'>
+                            <div className='projectImg'>
                                 <img src='image/sand-watch.png' alt='tempus site' />
                                 <div className='learnMore'>
                                     <div onClick={tempusToggle} className='learnMoreBtn'>Learn More</div>
@@ -150,7 +171,7 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                             </div>
                             <div className='directUrls'>
                                 <a href='https://github.com/hyunjinP31/mall-php-project'><AiFillGithub title='greenBooks Git 주소' /></a>
-                                <a href='https://comet-client.vercel.app/'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
+                                <a href='http://wiseblue31.dothome.co.kr/mall/index.php'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
                             </div>
                         </SwiperSlide>
                     </Swiper>

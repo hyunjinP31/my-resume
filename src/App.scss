@@ -88,6 +88,10 @@ body {
 //font
 
 //global style
+.progress {
+    font-size: 12px;
+    color: $mainGray;
+}
 .inner {
     max-width: 1200px;
     width: 100%;

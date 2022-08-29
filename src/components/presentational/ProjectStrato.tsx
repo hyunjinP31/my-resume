@@ -36,13 +36,13 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
                         <img src='image/strato_main.png' alt='strato 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='strato 상세 페이지 화면' />
+                        <img src='image/strato_dining.png' alt='strato 상세 페이지 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='strato 회원가입 화면' />
+                        <img src='image/strato_sign_up.png' alt='strato 회원가입 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='strato 예약 화면' />
+                        <img src='image/strato_reservation.png' alt='strato 예약 화면' />
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
@@ -67,7 +67,7 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
                             <p className='motivation'>
                                 스크롤 이벤트를 다뤄보고 싶어 최대한 스크롤 이벤트를 활용할 수 있는 주제를 찾게되었고,
                                 이미지를 창을 전부 차지할 정도로 크게 잡아도 세련되어 보이는 호텔이라는 주제를 골랐습니다.
-                                벤치마킹을 하던 중 호텔 '메이필드'의 디자인을 보고 모티브 삼아 사이트를 제작하였습니다.
+                                벤치마킹을 하던 중 호텔 '메이필드'의 디자인을 보고 모티브 삼아 사이트를 제작하였습니다. <span className='progress'>(반응형 업데이트 예정)</span>
                             </p>
                             <br/>
                             <p className='develop'>

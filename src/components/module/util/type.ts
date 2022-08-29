@@ -8,5 +8,6 @@ export type UtilState = {
         tempusOpen: Boolean;
         stratoOpen: Boolean;
         greenBooksOpen: Boolean;
+        myResumeOpen: Boolean;
     }
 }

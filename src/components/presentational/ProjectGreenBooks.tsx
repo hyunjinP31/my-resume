@@ -33,16 +33,16 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                         clickable: true,
                     }}>
                     <SwiperSlide>
-                        <img src='' alt='GreenBooks 메인 화면' />
+                        <img src='image/green_books_main1.png' alt='GreenBooks 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='GreenBooks 상품 디테일 화면' />
+                        <img src='image/green_books_detail.png' alt='GreenBooks 상품 디테일 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='GreenBooks 회원가입 화면' />
+                        <img src='image/green_books_create.png' alt='GreenBooks 새로운 책 등록 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='' alt='GreenBooks 내정보 화면' />
+                        <img src='image/green_books_basket.png' alt='GreenBooks 장바구니 화면' />
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
@@ -58,14 +58,14 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                                 <p><strong>Git Source Code</strong>: <a href='https://github.com/hyunjinP31/mall-php-project'>https://github.com/hyunjinP31/mall-php-project</a></p>
                             </li>
                             <li>
-                                <strong>Site</strong>: <a href='https://comet-client.vercel.app/'>https://comet-client.vercel.app/</a>
+                                <strong>Site</strong>: <a href='http://wiseblue31.dothome.co.kr/mall/index.php'>http://wiseblue31.dothome.co.kr/mall/index.php</a>
                             </li>
                         </ul>
                         <div className='description pDetailSection'>
                             <h2 className='pDetailSectionTitle'><span>📋</span>Short Description</h2>
                             <p className='motivation'>
                                 처음으로 사이트 전체를 제작했던 프로젝트 였습니다. 도서가 취미인지라 평소 다른 쇼핑 사이트 보다도 도서 판매 사이트를 많이 보아서
-                                주제를 선정할 때 의견을 내었고 체택되어 제작한 사이트입니다.
+                                주제를 선정할 때 의견을 내었고 체택되어 제작한 사이트입니다. <span className='progress'>(반응형 업데이트 예정)</span>
                             </p>
                             <br/>
                             <p className='develop'>

@@ -3,7 +3,7 @@ import { useDispatch,useSelector } from 'react-redux';
 import AboutMe from './AboutMe';
 import GreenBooks from './GreenBooks';
 import { RootState } from './module';
-import { isGreenBooksOpen, isStratoOpen, isTempusOpen } from './module/util';
+import { isGreenBooksOpen, isMyResumeOpen, isStratoOpen, isTempusOpen } from './module/util';
 import StratoSite from './StratoSite';
 import TempusSite from './TempusSite';
 
@@ -20,9 +20,17 @@ const MainIndex = () => {
     const greenBooksToggle = () => {
         dispatch(isGreenBooksOpen());
     }
+    const myResumeToggle = () => {
+        dispatch(isMyResumeOpen());
+    }
     return (
         <div className='Wrap'>
-            <AboutMe util={util} tempusToggle={tempusToggle} stratoToggle={stratoToggle} greenBooksToggle={greenBooksToggle} />
+            <AboutMe
+            util={util}
+            tempusToggle={tempusToggle}
+            stratoToggle={stratoToggle}
+            greenBooksToggle={greenBooksToggle}
+            myResumeToggle={myResumeToggle}/>
             <TempusSite />
             <StratoSite />
             <GreenBooks />
