@@ -49,48 +49,41 @@ const ProjectMyResume = ({myResumeToggle}: ProjectMyResumeProps) => {
                 <div className='pDetailRight'>
                     <div className='pDetailClose'><FaRegWindowClose onClick={myResumeToggle} /></div>
                     <div className='pDetailTitleWrap'>
-                        <h1 className='projectTitle'>TEMPUS</h1>
+                        <h1 className='projectTitle'>JIN'S RESUME</h1>
                         <p>개발일자 : 2022.08</p>
                     </div>
                     <div className='tempusMoreExplain'>
                         <ul className='projectsUrls pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>🔗</span>Url</h2></li>
                             <li>
-                                <p><strong>Git Source Code</strong>(client): <a href='https://github.com/hyunjinP31/comet-client'>https://github.com/hyunjinP31/comet-client</a></p>
-                                <p><strong>Git Source Code</strong>(server): <a href='https://github.com/hyunjinP31/comet-server'><span>https://github.com/hyunjinP31/comet-server</span></a></p>
+                                <p><strong>Git Source Code</strong>: <a href='https://github.com/hyunjinP31/my-resume'>https://github.com/hyunjinP31/my-resume</a></p>
                             </li>
                             <li>
-                                <strong>Site</strong>: <a href='https://comet-client.vercel.app/'>https://comet-client.vercel.app/</a>
+                                <strong>Site</strong>: <div></div>
                             </li>
                         </ul>
                         <div className='description pDetailSection'>
                             <h2 className='pDetailSectionTitle'><span>📋</span>Short Description</h2>
                             <p className='motivation'>
-                                나의 프로젝트를 등록하거나 타사용자의 프로젝트를 찜하거나 후원할 수 있는 펀딩 사이트 입니다.
-                                소규모 프로젝트나 개인이 상품을 런칭할 때 많이 사용되는 펀딩 사이트들의 프로세스에 흥미를 느껴 제작하게 되었습니다.
+                                프로젝트들을 한 번에 볼 수 있는 소개 사이트를 하나 만들자 생각해서 만들게 된 사이트입니다.
+                                다른 사이트들보다 적은 기능이 들어가기 때문에 타입스크립트로 충분히 제작할 수 있다는 생각에 도전하게 되었습니다.
                             </p>
                             <br />
                             <p className='develop'>
-                                <strong className='emphasis'>ReactJs</strong>를 사용해 개발하였으며 서버는 <strong className='emphasis'>node.js</strong>로 만들었하였습니다.
-                                <strong className='emphasis'>Redux, Redux-thunk</strong> 를 이용해 상태와 비동기 처리를 관리하며 비동기 처리에 대해 더 깊이 이해하고
-                                상태관리 라이브러리를 더 확실히 <strong className='emphasis'>이해하고 적응</strong>하게 된 프로젝트였습니다.
-                                <strong className='emphasis'>heroku</strong>로 배포하며 서버에서의 이미지 저장에는 다른 storage 사용이 필요하다는 것을 알게 되었고
-                                <strong className='emphasis'> AWS의 S3 서비스</strong>를 사용하여 이미지 저장을 따로 관리해 주었습니다.
+                                <strong className='emphasis'>React와 Typescript</strong>로 개발하였습니다. Typescript는 약 일주일이라는 짧은 시간동안 배웠기 때문에 특히나 다른 언어들보다 미숙하였는데
+                                이번 프로젝트를 진행하면서 다시 한 번 <strong className='emphasis'>공부하게되는 계기</strong>가 되었고, Typescript라는 언어와 조금 더 친해진 것 같습니다. <strong className='emphasis'>Typescript 전용 모듈</strong>이나
+                                <strong className='emphasis'>Redux의 액션과 초깃값</strong>에 대한 <strong className='emphasis'>타입 설정</strong>, props를 주고 받을 때 자식 컴포넌트에서 <strong className='emphasis'>props의 타입을 지정</strong>해 주어야 하는 것들이 낯설었지만
+                                기존 ReactJS를 하면서 했던 <strong className='emphasis'>실수들을 컴파일 단계에서 잡아주어</strong> 사소한 실수에 머리를 싸맬 일이 없다는 점에 개발을 하며 매력을 느꼈습니다.
                             </p>
                         </div>
                         <ul className='mainFunction pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>💡</span>Main Function</h2></li>
-                            <li><strong>회원가입</strong> <span>(<strong className='emphasis'>유효성 검사</strong>, submit 시 유효하지 않은 input이 있으면 <strong className='emphasis'>focusing</strong> 처리)</span></li>
-                            <li><strong>프로젝트 등록</strong> <span>(이미지 파일 업로드 시 input자리에 <strong className='emphasis'>이미지 로드</strong>. 프로젝트 이름 <strong className='emphasis'>중복 검사</strong>)</span></li>
-                            <li><strong>찜하기</strong> <span>(사용자의 동작에 따라 바로바로 표시되도록 <strong className='emphasis'>화면 렌더링</strong>에 신경씀. )</span></li>
-                            <li><strong>후원하기</strong> <span>(후원을 했을 때 달성 <strong className='emphasis'>percentage에 반영</strong>이 되도록 하고 후원현황이나 판매자인지에 따라 버튼의 표시를 다르게 함)</span></li>
+                            <li><strong>자세히 보기 팝업</strong> <span>(각 창 마다 Redux로 열림{'&'}닫힘 상태를 관리 )</span></li>
                         </ul>
                         <ul className='pDetailstacks pDetailSection'>
                             <li><h2 className='pDetailSectionTitle'><span>🔨</span>Stacks</h2></li>
-                            <li><strong>Frontend</strong>: ReactJs, Redux, Redux-thunk, Sass</li>
-                            <li><strong>Backend</strong>: node.js</li>
-                            <li><strong>Database</strong>: mySQL</li>
-                            <li><strong>Deployment</strong>: varcel, heroku, AWS(RDS, ED2, S3)</li>
+                            <li><strong>Frontend</strong>: React, Redux, Typescript, Sass</li>
+                            <li><strong>Deployment</strong>: varcel</li>
                             <li></li>
                         </ul>
                         <ul className='member pDetailSection'>

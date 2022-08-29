@@ -172,7 +172,7 @@ body {
     justify-content: space-between;
     .projectItem{
         position: relative;
-        &:hover .learnMoreBtn{
+        &:hover .showDetailBtn{
             top: 50%;
         }
     }
@@ -184,6 +184,12 @@ body {
         img{
             width: 100%;
             height: 100%;
+        }
+    }
+    .myResumeImg{
+        background: url('../public/image/draw_compass.png')center center/contain no-repeat;
+        &:hover {
+            background: url('../public/image/draw_compass_on.png')center center/contain no-repeat;
         }
     }
     .usedSkill{
@@ -212,13 +218,13 @@ body {
             }
         }
     }
-    .learnMore{
+    .showDetail{
         width: 100%;
         height: 100%;
         position: absolute;
         top: 0;
         left: 0;
-        .learnMoreBtn{
+        .showDetailBtn{
             width: 100px;
             height: 30px;
             transition: 0.3s;
@@ -245,6 +251,19 @@ body {
         height: 2px;
         .swiper-pagination-progressbar-fill {
             background: $mainColor;
+        }
+    }
+}
+.swiper {
+    .swiper-button-prev, .swiper-button-next {
+        width: 20px;
+        height: 40px;
+        background: $mainColor;
+        border-radius: 5px;
+        &::after {
+            font-size: 10px;
+            font-weight: bolder;
+            color: white;
         }
     }
 }
@@ -332,3 +351,48 @@ body {
     }
 }
 //projectDetail
+
+@media screen and (max-width: 768px) {
+    .Wrap {
+        margin-bottom: 70px;
+    }
+    .aboutMe {
+        flex-direction: column;
+    }
+    .meLeft {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .meRight{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .pDetailWrap {
+        position: fixed;
+    }
+    .pDetailExplain{
+        flex-direction: column;
+        .swiper {
+            display: none;
+        }
+        .pDetailRight{
+            width: 100%;
+            padding: 0 30px;
+        }
+    }
+    .pDetailClose {
+        right: 6px;
+        svg {
+            font-size: 28px;
+        }
+    }
+    .quickConnect {
+        .projectItem{
+            .showDetail {
+                .showDetailBtn {
+                    top: 80%;
+                }
+            }
+        }
+    }
+}

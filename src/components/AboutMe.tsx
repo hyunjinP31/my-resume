@@ -3,7 +3,7 @@ import { AiFillGithub, AiFillPhone } from 'react-icons/ai';
 import { IoEnterOutline } from 'react-icons/io5';
 import { SiGmail } from 'react-icons/si';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from "swiper";
+import { Pagination, Navigation, FreeMode } from "swiper";
 import 'swiper/css';
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -73,11 +73,11 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                     <h1 className='categoryTitle'>Projects</h1>
                     <Swiper className='quickConnect mySwiper'
                         spaceBetween={30}
-                        slidesPerView={2}
-                        slidesPerGroup={2}
+                        slidesPerView={1.4}
                         navigation={true}
-                        modules={[Navigation]}
+                        modules={[Navigation, FreeMode]}
                         centeredSlides={false}
+                        freeMode={true}
                         pagination={{
                             clickable: true,
                         }}
@@ -88,10 +88,9 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             }
                         }}>
                         <SwiperSlide className='projectItem'>
-                            <div className='projectImg'>
-                                <img src='image/compass.png' alt='myResume site' />
-                                <div className='learnMore'>
-                                    <div onClick={myResumeToggle} className='learnMoreBtn'>Learn More</div>
+                            <div className='projectImg myResumeImg'>
+                                <div className='showDetail'>
+                                    <div onClick={myResumeToggle} className='showDetailBtn'>Details</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -110,8 +109,8 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/sand-watch.png' alt='tempus site' />
-                                <div className='learnMore'>
-                                    <div onClick={tempusToggle} className='learnMoreBtn'>Learn More</div>
+                                <div className='showDetail'>
+                                    <div onClick={tempusToggle} className='showDetailBtn'>Details</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -134,8 +133,8 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/lift.png' alt='strato site' />
-                                <div className='learnMore'>
-                                    <div onClick={stratoToggle} className='learnMoreBtn'>Learn More</div>
+                                <div className='showDetail'>
+                                    <div onClick={stratoToggle} className='showDetailBtn'>Details</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -157,8 +156,8 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/bookmark.png' alt='greenBooks site' />
-                                <div className='learnMore'>
-                                    <div onClick={greenBooksToggle} className='learnMoreBtn'>Learn More</div>
+                                <div className='showDetail'>
+                                    <div onClick={greenBooksToggle} className='showDetailBtn'>Details</div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>

@@ -70,7 +70,7 @@ const ProjectTempus = ({tempusToggle}: ProjectTempusProps) => {
                             </p>
                             <br/>
                             <p className='develop'>
-                                <strong className='emphasis'>ReactJs</strong>를 사용해 개발하였으며 서버는 <strong className='emphasis'>node.js</strong>로 만들었하였습니다.
+                                <strong className='emphasis'>ReactJs</strong>를 사용해 개발하였으며 서버는 <strong className='emphasis'>node.js</strong>로 만들었습니다.
                                 <strong className='emphasis'>Redux, Redux-thunk</strong> 를 이용해 상태와 비동기 처리를 관리하며 비동기 처리에 대해 더 깊이 이해하고
                                 상태관리 라이브러리를 더 확실히 <strong className='emphasis'>이해하고 적응</strong>하게 된 프로젝트였습니다.
                                 <strong className='emphasis'>heroku</strong>로 배포하며 서버에서의 이미지 저장에는 다른 storage 사용이 필요하다는 것을 알게 되었고
