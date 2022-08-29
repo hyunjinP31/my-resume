@@ -88,7 +88,7 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                         }}>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
-                                <img src='' alt='tempus site' />
+                                <img src='image/sand-watch.png' alt='tempus site' />
                                 <div className='learnMore'>
                                     <div onClick={tempusToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>
@@ -112,7 +112,7 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
-                                <img src='' alt='strato site' />
+                                <img src='image/lift.png' alt='strato site' />
                                 <div className='learnMore'>
                                     <div onClick={stratoToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>
@@ -135,7 +135,7 @@ const AboutMe = ({util, tempusToggle, stratoToggle, greenBooksToggle}:AboutMePro
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
-                                <img src='' alt='greenBooks site' />
+                                <img src='image/bookmark.png' alt='greenBooks site' />
                                 <div className='learnMore'>
                                     <div onClick={greenBooksToggle} className='learnMoreBtn'>Learn More</div>
                                 </div>

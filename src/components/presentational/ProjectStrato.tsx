@@ -32,8 +32,8 @@ const ProjectStrato = ({stratoToggle}: ProjectStratoProps) => {
                     pagination={{
                         clickable: true,
                     }}>
-                    <SwiperSlide>
-                        <img src='' alt='strato 메인 화면' />
+                    <SwiperSlide className='stratoMain'>
+                        <img src='image/strato_main.png' alt='strato 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
                         <img src='' alt='strato 상세 페이지 화면' />
