@@ -34,16 +34,10 @@ const ProjectMyResume = ({myResumeToggle}: ProjectMyResumeProps) => {
                         clickable: true,
                     }}>
                     <SwiperSlide>
-                        <img src='image/tempus_main.png' alt='tempus 메인 화면' />
+                        <img src='image/resume_main.png' alt='myResume 메인 화면' />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src='image/tempus_project_detail.png' alt='tempus 상품 디테일 화면' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src='image/tempus_create_project.png' alt='tempus 상품 등록 화면' />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img src='image/tempus_my_menu.png' alt='tempus 내정보 화면' />
+                        <img src='image/resume_popup.png' alt='myResume 디테일 화면' />
                     </SwiperSlide>
                 </Swiper>
                 <div className='pDetailRight'>
