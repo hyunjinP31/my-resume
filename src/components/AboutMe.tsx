@@ -57,6 +57,7 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <li>
                             <h3>Back-End</h3>
                             <p>Node.js, express</p>
+                            <p>PHP</p>
                         </li>
                         <li>
                             <h3>Database</h3>
@@ -67,6 +68,7 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <p>AWS</p>
                             <p>Git</p>
                         </li>
+
                     </ul>
                 </div>
                 <div className='projects'>
@@ -89,8 +91,11 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         }}>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg myResumeImg'>
+                                <img src='image/compass.png' alt='나침반' />
                                 <div className='showDetail'>
-                                    <div onClick={myResumeToggle} className='showDetailBtn'>Details</div>
+                                    <div className="content__item" onClick={myResumeToggle}>
+                                        <span className="link link--helike"><span>Show Detail</span></span>
+                                    </div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -110,7 +115,9 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='projectImg'>
                                 <img src='image/sand-watch.png' alt='tempus site' />
                                 <div className='showDetail'>
-                                    <div onClick={tempusToggle} className='showDetailBtn'>Details</div>
+                                    <div className="content__item" onClick={tempusToggle}>
+                                        <span className="link link--helike"><span>Show Detail</span></span>
+                                    </div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -134,7 +141,9 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='projectImg'>
                                 <img src='image/lift.png' alt='strato site' />
                                 <div className='showDetail'>
-                                    <div onClick={stratoToggle} className='showDetailBtn'>Details</div>
+                                    <div className="content__item" onClick={stratoToggle}>
+                                        <span className="link link--helike"><span>Show Detail</span></span>
+                                    </div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
@@ -156,8 +165,10 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/bookmark.png' alt='greenBooks site' />
-                                <div className='showDetail'>
-                                    <div onClick={greenBooksToggle} className='showDetailBtn'>Details</div>
+                                <div className='showDetail' onClick={greenBooksToggle}>
+                                    <div className="content__item">
+                                        <span className="link link--helike"><span>Show Detail</span></span>
+                                    </div>
                                 </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
