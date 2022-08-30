@@ -92,11 +92,6 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg myResumeImg'>
                                 <img src='image/compass.png' alt='나침반' />
-                                <div className='showDetail'>
-                                    <div className="content__item" onClick={myResumeToggle}>
-                                        <span className="link link--helike"><span>Show Detail</span></span>
-                                    </div>
-                                </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
                                 <SwiperSlide className='skills'>React</SwiperSlide>
@@ -106,18 +101,15 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='simpleExplain'>
                                 개발자 박현진을 소개하는 사이트 <span>(현재 보고계신 사이트입니다)</span>
                             </div>
-                            <div className='directUrls'>
-                                <a href='https://github.com/hyunjinP31/my-resume'><AiFillGithub title='myResume Git 주소' /></a>
-                            </div>
+                                <div className='showDetail'>
+                                    <div className="content__item" onClick={myResumeToggle}>
+                                        <span className="link link--helike"><span>Detail Show</span></span>
+                                    </div>
+                                </div>
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/sand-watch.png' alt='tempus site' />
-                                <div className='showDetail'>
-                                    <div className="content__item" onClick={tempusToggle}>
-                                        <span className="link link--helike"><span>Show Detail</span></span>
-                                    </div>
-                                </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
                                 <SwiperSlide className='skills'>React</SwiperSlide>
@@ -130,20 +122,15 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='simpleExplain'>
                                 원하는 프로젝트를 찜하거나 후원할 수 있고 내가 직접 프로젝트를 올릴 수 있는 펀딩 사이트
                             </div>
-                            <div className='directUrls'>
-                                <a href='https://github.com/hyunjinP31/comet-client'><AiFillGithub title='tempus client Git 주소' /></a>
-                                <a href='https://github.com/hyunjinP31/comet-server'><AiFillGithub title='tempus server Git 주소' /></a>
-                                <a href='https://comet-client.vercel.app/'><IoEnterOutline title='tempus 사이트 주소' /></a>
-                            </div>
+                                <div className='showDetail'>
+                                    <div className="content__item" onClick={tempusToggle}>
+                                        <span className="link link--helike"><span>Detail Show</span></span>
+                                    </div>
+                                </div>
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/lift.png' alt='strato site' />
-                                <div className='showDetail'>
-                                    <div className="content__item" onClick={stratoToggle}>
-                                        <span className="link link--helike"><span>Show Detail</span></span>
-                                    </div>
-                                </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
                                 <SwiperSlide className='skills'>React</SwiperSlide>
@@ -155,20 +142,15 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='simpleExplain'>
                                 호텔 스트라토를 소개하는 사이트
                             </div>
-                            <div className='directUrls'>
-                                <a href='https://github.com/hyunjinP31/strato-client'><AiFillGithub title='strato client Git 주소' /></a>
-                                <a href='https://github.com/hyunjinP31/strato-server'><AiFillGithub title='strato server Git 주소' /></a>
-                                <a href='https://strato-client.vercel.app/'><IoEnterOutline title='strato 사이트 주소' /></a>
-                            </div>
+                                <div className='showDetail'>
+                                    <div className="content__item" onClick={stratoToggle}>
+                                        <span className="link link--helike"><span>Detail Show</span></span>
+                                    </div>
+                                </div>
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>
                             <div className='projectImg'>
                                 <img src='image/bookmark.png' alt='greenBooks site' />
-                                <div className='showDetail' onClick={greenBooksToggle}>
-                                    <div className="content__item">
-                                        <span className="link link--helike"><span>Show Detail</span></span>
-                                    </div>
-                                </div>
                             </div>
                             <Swiper slidesPerView={3} modules={[Pagination]} pagination={{ type: "progressbar" }} className='usedSkill mySwiper'>
                                 <SwiperSlide className='skills'>PHP</SwiperSlide>
@@ -178,10 +160,11 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                             <div className='simpleExplain'>
                                 원하는 도서를 장바구니에 넣고 구매할 수 있는 도서 판매 사이트
                             </div>
-                            <div className='directUrls'>
-                                <a href='https://github.com/hyunjinP31/mall-php-project'><AiFillGithub title='greenBooks Git 주소' /></a>
-                                <a href='http://wiseblue31.dothome.co.kr/mall/index.php'><IoEnterOutline title='greenBooks 사이트 주소' /></a>
-                            </div>
+                                <div className='showDetail' onClick={greenBooksToggle}>
+                                    <div className="content__item">
+                                        <span className="link link--helike"><span>Detail Show</span></span>
+                                    </div>
+                                </div>
                         </SwiperSlide>
                     </Swiper>
                 </div>
