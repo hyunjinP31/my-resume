@@ -104,11 +104,10 @@ const AboutMe = ({ util, tempusToggle, stratoToggle, greenBooksToggle, myResumeT
                                 <SwiperSlide className='skills'>Redux</SwiperSlide>
                             </Swiper>
                             <div className='simpleExplain'>
-                                개발자 박현진을 소개하는 사이트
+                                개발자 박현진을 소개하는 사이트 <span>(현재 보고계신 사이트입니다)</span>
                             </div>
                             <div className='directUrls'>
                                 <a href='https://github.com/hyunjinP31/my-resume'><AiFillGithub title='myResume Git 주소' /></a>
-                                <a href='https://my-resume-ruddy-six.vercel.app/'><IoEnterOutline title='myResume 사이트 주소' /></a>
                             </div>
                         </SwiperSlide>
                         <SwiperSlide className='projectItem'>

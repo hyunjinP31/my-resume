@@ -375,6 +375,10 @@ body {
     .simpleExplain {
         padding: 10px;
         height: 40%;
+        span{
+            font-size: 12px;
+            color: $mainDarkGray;
+        }
     }
     .directUrls{
         position: absolute;

@@ -58,9 +58,6 @@ const ProjectMyResume = ({myResumeToggle}: ProjectMyResumeProps) => {
                             <li>
                                 <p><strong>Git Source Code</strong>: <a href='https://github.com/hyunjinP31/my-resume'>https://github.com/hyunjinP31/my-resume</a></p>
                             </li>
-                            <li>
-                                <strong>Site</strong>: <div></div>
-                            </li>
                         </ul>
                         <div className='description pDetailSection'>
                             <h2 className='pDetailSectionTitle'><span>📋</span>Short Description</h2>
