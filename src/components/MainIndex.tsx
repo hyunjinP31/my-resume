@@ -1,11 +1,8 @@
 import React from 'react';
 import { useDispatch,useSelector } from 'react-redux';
 import AboutMe from './AboutMe';
-import GreenBooks from './GreenBooks';
 import { RootState } from './module';
 import { isGreenBooksOpen, isMyResumeOpen, isStratoOpen, isTempusOpen } from './module/util';
-import StratoSite from './StratoSite';
-import TempusSite from './TempusSite';
 
 
 const MainIndex = () => {
@@ -31,9 +28,6 @@ const MainIndex = () => {
             stratoToggle={stratoToggle}
             greenBooksToggle={greenBooksToggle}
             myResumeToggle={myResumeToggle}/>
-            <TempusSite />
-            <StratoSite />
-            <GreenBooks />
         </div>
     );
 };
