@@ -84,7 +84,7 @@ const ProjectGreenBooks = ({greenBooksToggle}: ProjectGreenBooksProps) => {
                             <li><h2 className='pDetailSectionTitle'><span>🔨</span>Stacks</h2></li>
                             <li><strong>Frontend</strong>: PHP, Javascript, Sass</li>
                             <li><strong>Database</strong>: mySQL</li>
-                            <li><strong>Deployment</strong>: varcel, heroku, AWS(RDS, ED2, S3)</li>
+                            <li><strong>Deployment</strong>: DotHome, phpMyAdmin, FileZilla</li>
                             <li></li>
                         </ul>
                         <ul className='member pDetailSection'>
