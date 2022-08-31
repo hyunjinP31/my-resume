@@ -359,7 +359,7 @@ body {
         width: 120px;
         height: 40px;
         color: $mainColor2;
-        text-decoration: line-through;
+        text-decoration: underline;
         &:hover {
             text-decoration: none;
             font-style: italic;
